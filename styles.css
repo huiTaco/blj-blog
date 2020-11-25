@@ -1,0 +1,40 @@
+.title {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+
+.haupttext {
+    margin: auto;
+    margin-bottom: 10px;
+  width: 50%;
+  border: 3px solid rgb(0, 23, 128);
+  padding: 10px;
+}
+
+
+.nav {
+    margin: auto;
+    margin-bottom: 10px;
+  width: 50%;
+  border: 3px solid rgb(226, 17, 245);
+  padding: 10px;
+}
+.blogs {
+    margin: auto;
+    margin-bottom: 10px;
+  width: 50%;
+  border: 3px solid rgb(8, 8, 8);
+  padding: 10px;
+}
+.post {
+    margin: auto;
+    margin-bottom: 10px;
+  width: 50%;
+  border: 3px solid rgb(230, 245, 17);
+  padding: 10px;
+}
