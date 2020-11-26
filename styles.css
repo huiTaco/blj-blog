@@ -1,3 +1,32 @@
+.blogsbody{
+  background-image: url("unknown.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+
+}
+.haupt{
+  background-image: url("unknown.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+
+}
+.login{
+  background-image: url("image0.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+p , ul {
+  color: #66d9ff;
+}
+
 .title {
     margin: auto;
     margin-top: 30px;
@@ -14,6 +43,7 @@
   width: 50%;
   border: 3px solid rgb(0, 23, 128);
   padding: 10px;
+  justify-content: space-around;
 }
 
 
@@ -25,13 +55,19 @@
   padding: 10px;
 }
 .blogs {
+   grid-column-start: 1;
+    grid-column-end: 3;
     margin: auto;
     margin-bottom: 10px;
+    
   width: 50%;
   border: 3px solid rgb(8, 8, 8);
   padding: 10px;
+  
+  
 }
 .post {
+  justify-content: space-around;
     margin: auto;
     margin-bottom: 10px;
   width: 50%;
