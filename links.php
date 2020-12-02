@@ -23,7 +23,7 @@ $urls = $sqlQuery->fetchAll();
     <title>Links</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class = "links">
 <div class = "title">
         <h1>Links</h1>
     </div>

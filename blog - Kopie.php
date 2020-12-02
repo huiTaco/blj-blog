@@ -27,7 +27,6 @@
     <?php
     include 'nav.php';
     ?>
-    
     <div class="haupttext">
         <p>ölkdsjföaosdijuföoljdksagöljöoiewjöoijögoeidjögoijöeopijh</p>
         <p>ölkdsjföaosdijuföoljdksagöljöoiewjöoijögoeidjögoijöeopijh</p>
@@ -44,9 +43,9 @@
 
 
   <?php
-     $user = 'd041e_thloetscher';
-     $password = '12345_Db!!!';
-    $pdo = new PDO('mysql:host=mysql2.webland.ch;dbname=d041e_thloetscher', $user, $password, [
+     $user = 'root';
+     $password = '';
+    $pdo = new PDO('mysql:host=localhost;dbname=blog', $user, $password, [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
     ]);
@@ -57,26 +56,28 @@
     foreach($rows as $row){
         
        
-        if (HasEmptySpaces($row[1]) === false && strlen($row[1]) > 80) {
+        if (HasEmptySpaces($row[1]) === false && strlen($row[1]) > 100) {
             echo"<ul>";
-            echo '<li>'.  htmlspecialchars($row[2]) . '</li>';
-            echo "</ul>";
-            echo '<br>' . htmlspecialchars($row[4]);
-            echo '<br>' . htmlspecialchars($row[3]);
-            echo '<br>' . '<img class="bild" src="' . htmlspecialchars($row[5]) . '">';
+            echo "<li>$row[2]</li>";
+            echo "<br>$row[4]";
+            echo "<br>$row[3]";
+            echo "<br><img src = $row[5]>";
+           // echo "<br>$row[5]";
+            //echo "<li><img src ="$row[5]"></li>";
             // wir geben nur die ersten 200 Zeichen aus und fügen nach 100 Zeichen einen Leerstring ein
-            echo "<br>" . substr($row[1], 0, 80) . "<br>" . substr($row[1], 0, 80). "<br>" . substr($row[1], 0, 80). "<br>" . substr($row[1], 0, 80). "<br>" . substr($row[1], 0, 80) . "<br>" . substr($row[1], 0, 80) . "<br>" . substr($row[1], 0, 80) . "<br>" . substr($row[1], 0, 80) . "<br>" . substr($row[1], 0, 80) . "<br>" . substr($row[1], 0, 80); 
-            echo "<hr>";
+            echo "<br>" . substr($row[1], 0, 100) . "<br>" . substr($row[1], 100, 100). "<br>" . substr($row[1], 100, 100). "<br>" . substr($row[1], 100, 100). "<br>" . substr($row[1], 100, 100) . "<br>" . substr($row[1], 100, 100) . "<br>" . substr($row[1], 100, 100) . "<br>" . substr($row[1], 100, 100) . "<br>" . substr($row[1], 100, 100) . "<br>" . substr($row[1], 100, 100); 
+            echo"</ul>";
         }
         else {
-            echo "<ul>";
-            echo '<li>'. htmlspecialchars($row[2]). '</li>';
-            echo "</ul>";
-            echo htmlspecialchars($row[4]);
-            echo '<br>' . htmlspecialchars($row[3]);
-            echo '<br>' . htmlspecialchars($row[1]);
-            echo '<br>' . '<img class="bild" src="' . htmlspecialchars($row[5]) . '">';
-            echo "<hr>";
+            echo"<ul>";
+            echo "<li>$row[2]</li>";
+            echo "$row[4]";
+            echo "<br>$row[3]";
+            echo "<br>$row[1]";
+            echo "<br><img class=\"bild\"src = $row[5]>";
+            //echo "<li><img src ="$row[5]"></li>";
+            echo"</ul><hr>";
+            
         }
 }       
     ?>
